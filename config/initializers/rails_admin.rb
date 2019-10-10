@@ -14,6 +14,12 @@ RailsAdmin.config do |config|
       field :content
       field :page
     end
+
+    list do
+      field :title
+      field :content
+      field :page
+    end
   end
 
   config.model 'TeamMember' do
