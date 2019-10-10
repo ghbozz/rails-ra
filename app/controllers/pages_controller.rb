@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def home
     @content = Page.find_by(title: 'Home').set_content
   end
+
+  def team
+    @team_members = TeamMember.all
+  end
 end
