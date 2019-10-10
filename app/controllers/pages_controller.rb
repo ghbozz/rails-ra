@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def team
+    @content = Page.find_by(title: 'Team').set_content
     @team_members = TeamMember.all
   end
 end
