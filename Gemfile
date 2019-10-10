@@ -9,7 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'rails_admin', '~> 2.0'
-gem "mini_magick"
+gem 'mini_magick'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

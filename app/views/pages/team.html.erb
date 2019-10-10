@@ -1,13 +1,30 @@
-<div class="container d-flex flex-column justify-content-center align-items-center text-center" style="height: 90vh;">
-  <h1><%= @content[:title] %></h1>
-  <% @team_members.each do |member| %>
-    <div class="card" style="width: 18rem;">
-      <%= image_tag member.avatar, class: 'card-img-top' %>
-      <div class="card-body">
-        <h5 class="card-title"><%= member.name %></h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<h1 style="display: block; text-align: center; margin-top: 100px;"><%= @content[:title] %></h1>
+<div class="container d-flex justify-content-center align-items-center text-center" style="height: 70vh;">
+  <div class="row">
+    <% @team_members.each do |member| %>
+      <div class="col">
+        <div class="card" style="width: 18rem; height: 25rem;">
+          <div class="figure">
+            <%= image_tag member.avatar, class: 'card-img-top avatar-custom' %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= member.name %></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
+
+<style>
+  .figure {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .avatar-custom {
+    width: 300px;
+  }
+</style>
