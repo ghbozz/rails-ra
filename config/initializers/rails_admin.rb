@@ -1,5 +1,21 @@
 RailsAdmin.config do |config|
 
+  config.model 'Page' do
+    create do
+      configure :fields do
+        hide
+      end
+    end
+  end
+
+  config.model 'Field' do
+    create do
+      field :title
+      field :content
+      field :page
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
