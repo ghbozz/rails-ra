@@ -16,6 +16,13 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model 'TeamMember' do
+    list do
+      field :name
+      field :avatar
+    end
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
